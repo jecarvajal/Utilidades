@@ -1,0 +1,72 @@
+"----------Vinegar Plugin-------------"
+
+set nocompatible              " be iMproved, required
+so ~/.vim/plugins.vim
+
+"-------------General----------------"
+
+set number
+syntax enable
+colorscheme atom-dark-256
+set backspace=indent,eol,start
+let mapleader=','
+set clipboard=unnamed
+set complete=.,w,b,u
+
+"-------------NERDTree--------------"
+
+nmap <C-A> :NERDTreeToggle<cr>
+
+"-------------Search----------------"
+
+set incsearch
+set hlsearch
+
+"---------Split Management----------"
+set splitbelow
+set splitright
+
+"-------------DataBase--------------"
+
+"let g:dbext_default_profile_TEST = 'type=ORA:host=mdebddd06:port=1537:dbname=DLLPDN.WORLD:user=OPS$PROCEDIM:passwd=ibmprocedim'"
+"let g:dbext_default_profile_TEST = 'type=ORA:srvname=DLLPDN.WORLD:user=OPS\$PROCEDIM:passwd=ibmprocedim'"
+let g:dbext_default_profile_TEST = 'type=ORA:srvname=DLLPDN.WORLD:user=pasoinfo:passwd=pkSJynxC'
+let g:dbext_default_profile = 'TEST'
+
+
+"-------------NerdTree--------------"
+
+let NERDTreeHijackNetrw = 0
+
+"-------------Visuals--------------"
+
+hi LineNr guibg=red
+"set foldcolumn=2"
+hi foldcolumn guibg=green
+set guifont=Fira_Code:h17
+
+"-------------Mapping---------------"
+
+nmap ,ev :tabedit $MYVIMRC<cr>
+nmap ,esj :tabedit ~/.vim/snippets/java.snippets<cr>
+nmap <Leader><space> :nohlsearch<cr>
+
+nmap <C-DOWN>    <C-W><C-J> :nohlsearch<cr>
+nmap <C-UP>      <C-W><C-K> :nohlsearch<cr>
+nmap <C-LEFT>    <C-W><C-H> :nohlsearch<cr>
+nmap <C-RIGHT>   <C-W><C-L> :nohlsearch<cr>
+nmap <C-t>	 :CtrlPBufTag<cr>
+nmap <C-y>	 :CtrlPMRUFiles<cr>
+
+"-------------JavaScript Plugin---------"
+let g:javascript_plugin_jsdoc = 1
+
+
+"-------------Auto-commands---------"
+augroup autosourcing
+	autocmd! 
+	autocmd BufWritePost .vimrc source %
+augroup END
+
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+"-------------Notes---------------"
