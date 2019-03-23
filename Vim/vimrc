@@ -28,11 +28,6 @@ set splitright
 
 "-------------DataBase--------------"
 
-"let g:dbext_default_profile_TEST = 'type=ORA:host=mdebddd06:port=1537:dbname=DLLPDN.WORLD:user=OPS$PROCEDIM:passwd=ibmprocedim'"
-"let g:dbext_default_profile_TEST = 'type=ORA:srvname=DLLPDN.WORLD:user=OPS\$PROCEDIM:passwd=ibmprocedim'"
-let g:dbext_default_profile_TEST = 'type=ORA:srvname=DLLPDN.WORLD:user=pasoinfo:passwd=pkSJynxC'
-let g:dbext_default_profile = 'TEST'
-
 
 "-------------NerdTree--------------"
 
